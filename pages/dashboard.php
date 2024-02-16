@@ -17,7 +17,7 @@ require "parts/navbar.php";?>
       <!-- manage posts -->
       <div class="col">
         <div class="card mb-2">
-          <div class="card-body bg-secondary text-white">
+          <div class="card-body bg-danger fw-bold text-white">
             <h5 class="card-title text-center">
               <div class="mb-1">
                 <i class="bi bi-pencil-square" style="font-size: 3rem"></i>
@@ -37,7 +37,7 @@ require "parts/navbar.php";?>
 <?php if (UserIsAdmin()) : ?>
       <div class="col">
         <div class="card mb-2">
-          <div class="card-body bg-secondary text-white">
+          <div class="card-body bg-danger fw-bold text-white">
             <h5 class="card-title text-center">
               <div class="mb-1">
                 <i class="bi bi-people" style="font-size: 3rem"></i>
@@ -57,7 +57,7 @@ require "parts/navbar.php";?>
 
     </div>
     <div class="mt-4 text-center">
-      <a href="/" class="btn btn-sm bg-secondary text-white border border-radius"
+      <a href="/" class="btn btn-sm bg-danger fw-bold text-white border border-radius"
         ><i class="bi bi-arrow-left"></i> Back</a
       >
     </div>

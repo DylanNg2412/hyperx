@@ -52,13 +52,13 @@ require "parts/header.php";
 
         <div class="text-center">
             <input type="hidden" name="product_id" />
-            <button type="submit" class="btn btn-secondary">Add</button>
+            <button type="submit" class="btn btn-danger">Add</button>
         </div>
 
         </form>
       </div>
       <div class="text-center">
-        <a href="/manage-products" class="btn btn-link btn-sm bg-white text-secondary"
+        <a href="/manage-products" class="btn btn-link btn-sm bg-white text-black"
           ><i class="bi bi-arrow-left"></i> Back to Manage Products</a
         >
       </div>

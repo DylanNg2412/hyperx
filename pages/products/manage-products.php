@@ -36,11 +36,11 @@ $products = $query->fetchAll();
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1 text-dark">Manage Products</h1>
         <div class="text-end">
-          <a href="/manage-products-add" class="btn btn-secondary btn-sm border border-radius"
+          <a href="/manage-products-add" class="btn btn-danger btn-sm border border-radius"
             >Add New Product</a>
         </div>
       </div>
-      <div class="card mb-2 p-4 bg-secondary">
+      <div class="card mb-2 p-4 bg-danger">
         <?php require "parts/message_success.php" ?>
         <table class="table text-center">
           <thead class="text-white">
@@ -130,7 +130,7 @@ $products = $query->fetchAll();
             </table>
         </div>
       <div class="text-center ">
-        <a href="/dashboard" class="btn btn-secondary border border-radius btn-sm "
+        <a href="/dashboard" class="btn btn-danger border border-radius btn-sm "
           ><i class="bi bi-arrow-left"></i> Back to Dashboard</a
         >
       </div>
