@@ -1,3 +1,4 @@
+
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
@@ -20,36 +21,36 @@
       
         <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">HOME</a>
+            <a class="nav-link fw-bold" aria-current="page" href="/">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/products">ALL PRODUCTS</a>
+            <a class="nav-link fw-bold" aria-current="page" href="/products">ALL PRODUCTS</a>
           </li>
           <?php if ( isAdminOrEditor() ) : ?>
          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/dashboard">DASHBOARD</a>
+            <a class="nav-link fw-bold" aria-current="page" href="/dashboard">DASHBOARD</a>
           </li>
         <?php endif ; ?>         
           <?php if ( isset( $_SESSION["user"] ) ) : ?>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">LOGOUT</a>
+            <a class="nav-link fw-bold" href="/logout">LOGOUT</a>
           </li>
           <?php else : ?>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">SIGN UP</a>
+            <a class="nav-link fw-bold" href="/signup">SIGN UP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login">LOGIN</a>
+            <a class="nav-link fw-bold" href="/login">LOGIN</a>
           </li>
           <?php endif ; ?>
           <?php if ( isset( $_SESSION["user"] ) ) : ?>
           <li class="nav-item">
-            <a class="nav-link" href="/orders">ORDERS</a>
+            <a class="nav-link fw-bold" href="/orders">ORDERS</a>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/cart">
+            <a class="nav-link fw-bold" href="/cart">
               CART
               <span><sup>0</sup></span>
             </a>

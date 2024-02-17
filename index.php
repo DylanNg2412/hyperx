@@ -136,8 +136,8 @@
       case 'cart/delete':
         require 'includes/cart/delete.php';
         break; 
-      case 'cart/check_out':
-        require 'includes/cart/check_out.php';
+      case 'cart/checkout':
+        require 'includes/cart/checkout.php';
         break; 
       // cart action
 

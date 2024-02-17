@@ -39,7 +39,7 @@
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1 text-dark">My Cart</h1>
       </div>
-      <div class="card mb-2 p-4 bg-secondary">
+      <div class="card mb-2 p-4 bg-danger">
         <?php require "parts/message_success.php" ?>
         <table class="table text-center">
           <thead class="text-white">
@@ -75,8 +75,7 @@
             <td>
               
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $product['id']; ?>"id="btnstyle">
-                        <i class="bi bi-trash"></i
-                        >
+                        <i class="bi bi-trash"></i>
                     </button>
                     <div class="modal fade" id="delete-modal-<?= $product['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -113,15 +112,15 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center my-3">
-                    <a href="/products" class="btn btn-secondary border border-radius btn-sm">Continue Shopping</a>
+                    <a href="/products" class="btn btn-danger border border-radius btn-sm">Continue Shopping</a>
                     <!-- if there is product in cart, then only display the checkout button -->
                     <?php if ( !empty( $products_in_cart ) ) : ?>
                         <form
                             method="POST"
-                            action="cart/check_out"
+                            action="cart/checkout"
                             >
                             <input type="hidden" name="total_amount" value="<?= $total_in_cart; ?>" />
-                            <button type="submit" class="btn btn-secondary border border-radius btn-sm">Checkout</button>
+                            <button type="submit" class="btn btn-danger border border-radius btn-sm">Checkout</button>
                         </form>
                     <?php endif; ?>
                 </div>

@@ -17,20 +17,7 @@ $products = $query->fetchAll();
   require "parts/header.php";
   require "parts/navbar.php";
 ?>
-  <style>
-    * {   
-  font-family: "Manrope", sans-serif;
-  }
-#manageProductsBG{
-  background-image: url(../Images/backgroundTOPO.webp);
-  background-size: cover;
-  background-position: center center;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top:50px;
-  padding-bottom:50px;
-}
-</style>
+
 <section id="manageProductsBG">
 <div class="container p-5" style="max-width: 1500px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
@@ -59,7 +46,7 @@ $products = $query->fetchAll();
               <tr>
                 <th scope="row"><?= $product['id']; ?></th>
                     <td>
-                    <img src="/<?= $product["image_url"]; ?>" width="150px"class="mt-1" />
+                    <img src="/<?= $product["image_url"]; ?>" width="180px"class="mt-1" />
                     </td>         
                     <td><?= $product['name']; ?></td>
                     <td><?= $product['price']; ?></td>
