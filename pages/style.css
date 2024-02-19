@@ -1,9 +1,14 @@
 .bg-overlay {
-  background-image: url(https://log-wp-media.s3.amazonaws.com/wp-content/uploads/2023/03/Pulsefire-haste-2-feautred-image.jpg);
-
+  background-image: url(https://mms.businesswire.com/media/20220228005162/en/1372529/5/pr-alloy-origins-65-1000x610.jpg);
   background-size: cover;
-  background-position: center;
   height: 650px;
+}
+
+.products-bg {
+  background-image: url();
+  background-size: cover;
+  height: 100vh;
+  background-position: center center;
 }
 
 .hero-text-right {
@@ -23,10 +28,6 @@
   font-weight: bolder;
 }
 
-.hero-button:hover {
-  color: red;
-}
-
 .item-size {
   padding-top: 75px;
   padding-bottom: 75px;
@@ -39,4 +40,9 @@
 .col-size {
   width: 280px;
   height: 280px;
+}
+
+.product-img {
+  width: 250px;
+  height: 250px;
 }

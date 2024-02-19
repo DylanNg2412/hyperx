@@ -24,13 +24,25 @@
             <a class="nav-link fw-bold" aria-current="page" href="/">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" aria-current="page" href="/products">ALL PRODUCTS</a>
+            <a class="nav-link fw-bold" aria-current="page" href="/products">PRODUCTS</a>
           </li>
           <?php if ( isAdminOrEditor() ) : ?>
          <li class="nav-item">
             <a class="nav-link fw-bold" aria-current="page" href="/dashboard">DASHBOARD</a>
           </li>
-        <?php endif ; ?>         
+        <?php endif ; ?>
+        <?php if ( isset( $_SESSION["user"] ) ) : ?>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="/orders">ORDERS</a>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="/cart">
+              CART
+            </a>
+          </li>
+          <?php endif ; ?>
+                 
           <?php if ( isset( $_SESSION["user"] ) ) : ?>
           <li class="nav-item">
             <a class="nav-link fw-bold" href="/logout">LOGOUT</a>
@@ -43,19 +55,7 @@
             <a class="nav-link fw-bold" href="/login">LOGIN</a>
           </li>
           <?php endif ; ?>
-          <?php if ( isset( $_SESSION["user"] ) ) : ?>
-          <li class="nav-item">
-            <a class="nav-link fw-bold" href="/orders">ORDERS</a>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link fw-bold" href="/cart">
-              CART
-              <span><sup>0</sup></span>
-            </a>
-          </li>
-          <?php endif ; ?>
+          
         </ul>
         <!-- navbar collapse -->
       </div>

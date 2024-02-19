@@ -57,10 +57,10 @@ require "parts/header.php" ?>
             <label for="inputState" class="form-label">Switch</label>
             <select id="inputState" class="form-select" name="switch">
             <option value="Red Switch" <?= $product["switch"] === 'Red Switch' ? "selected" : "" ?>>
-            Red Switch
+            Red Linear
             </option>
             <option value="Blue Switch" <?= $product["switch"] === 'Blue Switch' ? "selected" : "" ?>>
-            Blue Switch
+            Blue Tactile
             </option>
             </select>
         </div>
@@ -80,13 +80,8 @@ require "parts/header.php" ?>
         <div class="mb-3">
             <label class="form-label">Image</label>
             <div>
-              <input type="file" name="image_url" />
-              <?php if ( !empty( $product["image_url"] ) ) : ?>
-                <div>
-                  <img src="/<?= $product["image_url"]; ?>" width="150px" class="mt-1" />
-                  <input type="hidden" name="original_image" value="<?= $product["image_url"]; ?>" />
-                </div>
-              <?php endif; ?>
+              <input type="text" name="image_url" class="form-control" value="<?= $product["image_url"]; ?>"/>
+              
              </div>
           </div>
 
@@ -101,8 +96,8 @@ require "parts/header.php" ?>
         </form>
       </div>
       <div class="text-center">
-        <a href="/manage-posts" class="btn btn-link btn-sm"
-          ><i class="bi bi-arrow-left"></i> Back to Posts</a
+        <a href="/manage-products" class="btn btn-link btn-sm"
+          ><i class="bi bi-arrow-left"></i> Back to Products</a
         >
       </div>
     </div>

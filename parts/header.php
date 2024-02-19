@@ -14,6 +14,6 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/pages/style.css" />
   </head>
   <body>

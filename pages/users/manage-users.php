@@ -40,12 +40,12 @@
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1">Manage Users</h1>
         <div class="text-end">
-          <a href="/manage-users-add" class="btn bg-secondary text-white border border-radius btn-sm"
+          <a href="/manage-users-add" class="btn bg-danger text-white border border-radius btn-sm"
             >Add New User</a
           >
         </div>
       </div>
-      <div class="card mb-2 p-4 bg-secondary">
+      <div class="card mb-2 p-3 bg-danger">
         <?php require "parts/message_success.php"; ?>
         <table class="table">
           <thead class="text-white">
@@ -137,7 +137,7 @@
         </table>
       </div>
       <div class="text-center">
-        <a href="/dashboard" class="btn bg-secondary btn-sm text-white border border-radius"
+        <a href="/dashboard" class="btn bg-danger btn-sm text-white border border-radius"
           ><i class="bi bi-arrow-left"></i> Back to Dashboard</a
         >
       </div>

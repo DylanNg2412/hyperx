@@ -15,19 +15,19 @@
     $price = $_POST["price"];
     $switch = $_POST["switch"];
     $status = $_POST["status"];
+    $image_url = $_POST["image_url"];
 
-    // capture the image file
-    $image_url = $_FILES["image_url"];
+    // // capture the image file
+    // $image_url = $_FILES["image_url"];
 
-
-    // make sure that you only upload if image is available
-    if ( !empty( $image_url['name'] ) ) {
-        $target_dir = "uploads/";
-        // add the image name to the uploads folder path
-        $target_path = $target_dir . time() . '_' . basename( $image_url['name'] ); // uploads/892938829293_image.jpg
-        // move the file to the uploads folder
-        move_uploaded_file( $image_url["tmp_name"], $target_path );
-    }
+    // // make sure that you only upload if image is available
+    // if ( !empty( $image_url['name'] ) ) {
+    //     $target_dir = "upload_images/";
+    //     // add the image name to the uploads folder path
+    //     $target_path = $target_dir . time() . '_' . basename( $image_url['name'] ); // uploads/892938829293_image.jpg
+    //     // move the file to the uploads folder
+    //     move_uploaded_file( $image_url["tmp_name"], $target_path );
+    // }
 
 
     // Step 3: error checking
@@ -42,7 +42,8 @@
             $query->execute([
                 'name' => $name,
                 'price' => $price,
-                'image_url' => !empty( $image_url['name'] ) ? $target_path : '',
+                // 'image_url' => !empty( $image_url['name'] ) ? $target_path : '',
+                'image_url' => $image_url,
                 'switch' => $switch,
                 'status' => $status,
                 

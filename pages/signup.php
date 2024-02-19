@@ -4,7 +4,7 @@
     <section id="signup">
         <div class="container my-5 mx-auto" style="max-width: 500px;">
               <h1 class="h1 mb-4 text-center signupWord">Sign Up a New Account</h1>
-              <div class="card p-4 bg-secondary">
+              <div class="card p-4 bg-danger">
               <?php require "parts/message_error.php"; ?>
                 <form method="POST" action="/auth/signup">
                   <div class="mb-3">
@@ -36,7 +36,7 @@
                     />
                   </div>
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-fu text-white">
+                    <button type="submit" class="btn btn-fu text-white bg-dark">
                       Sign Up
                     </button>
                   </div>

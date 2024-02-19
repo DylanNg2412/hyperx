@@ -45,10 +45,9 @@
           <thead class="text-white">
             <tr>
               <th scope="col">Keyboard Name</th>
-              <th scope="col">Price</th>
               <th scope="col">Image</th>
               <th scope="col">Quantity</th>
-              <th scope="col">Total</th>
+              <th scope="col">Price</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -66,44 +65,41 @@
             ?>
               <tr>
                 <th scope="row"><?= $product['name']; ?></th>
-                    <td>MYR <?= $product['price']; ?></td>
-                    <td>
-                    <img src="/<?= $product["image_url"]; ?>" width="150px"class="mt-1" />
-                    </td> 
-                    <td><?= $product['quantity']; ?></td>
-                    <td>MYR <?= $product_total; ?></td>
-            <td>
-              
+                  <td>
+                  <img src="<?= $product["image_url"]; ?>" width="150px"class="mt-1" />
+                  </td>
+                  <td><?= $product['quantity']; ?></td>
+                  <td>MYR <?= $product['price']; ?></td>              
+                  <td>
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $product['id']; ?>"id="btnstyle">
                         <i class="bi bi-trash"></i>
                     </button>
                     <div class="modal fade" id="delete-modal-<?= $product['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Are you sure you want to remove: <?= $product['name']; ?>?</h1>
-                                    <button type="button" id="btnstyle" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body me-auto text-dark">
-                                This action is not reversible.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                                    <form method= "POST" action="/cart/delete">
-                                        <input type="hidden" name="cart_id" value= "<?= $product['id']; ?>" />
-                                        <button type="submit" id="" class="btn btn-danger">Yes, Delete</button>
-                                    </form>
-                                </div>
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Are you sure you want to remove: <?= $product['name']; ?>?</h1>
+                              <button type="button" id="btnstyle" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+                            <div class="modal-body me-auto text-dark">
+                                This action is not reversible.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                              <form method= "POST" action="/cart/delete">
+                                <input type="hidden" name="cart_id" value= "<?= $product['id']; ?>" />
+                                <button type="submit" id="" class="btn btn-danger">Yes, Delete</button>
+                              </form>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-            </div>
-            </td>
+                  </td>
           </tr>
           <?php endforeach; ?>
-          <tr class="d-flex justify-content-end align-items-right" >
-            <td colspan="3" class="text-end">Total</td>
-            <td> MYR<?=$total_in_cart; ?> </td>
+          <tr>
+            <td colspan="4" class="text-end pe-5">Total: MYR<?=$total_in_cart; ?> </td>
           </tr>
           <?php endif; // end - empty( $products_in_cart ) ?>
                 </tbody>

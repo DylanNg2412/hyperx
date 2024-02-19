@@ -31,8 +31,8 @@ require "parts/header.php";
             <label for="inputState" class="form-label">Switch</label>
             <select id="inputState" class="form-select" name="switch">
             <option selected>Choose...</option>
-            <option>Red Switch</option>
-            <option>Blue Switch</option>
+            <option>Red Linear</option>
+            <option>Blue Tactile</option>
             </select>
         </div>
         
@@ -46,8 +46,8 @@ require "parts/header.php";
         </div>
 
         <div class="col-12">
-            Select image to upload:
-            <input type="file" name="image_url" >
+            Paste URL to upload:
+            <input type="text" name="image_url" class="form-control" >
         </div>
 
         <div class="text-center">

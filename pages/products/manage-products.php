@@ -46,7 +46,7 @@ $products = $query->fetchAll();
               <tr>
                 <th scope="row"><?= $product['id']; ?></th>
                     <td>
-                    <img src="/<?= $product["image_url"]; ?>" width="180px"class="mt-1" />
+                    <img src="<?= $product["image_url"]; ?>" width="150px"class="mt-1" />
                     </td>         
                     <td><?= $product['name']; ?></td>
                     <td><?= $product['price']; ?></td>
@@ -55,7 +55,7 @@ $products = $query->fetchAll();
                 <?php
                 if($product["status"] == "No Stock"){
                     echo "badge bg-danger";
-                } else if($product['status'] == "In Stock"){
+                } else if($product['status'] == "In Stock "){
                     echo "badge bg-success";
                 }
                 ?>"><?= $product['status']; ?></span>
@@ -74,21 +74,23 @@ $products = $query->fetchAll();
             <td>
                 <div class="buttons">
                     <a
-                        href="/product?id=<?= $product['id']; ?>"
-                        id="btnstyle"
-                        class="btn btn-primary btn-sm me-2 <?= $product['status'] === 'pending' ? 'disabled' : ''?>"
-                    ><i class="bi bi-eye"></i
-                        ></a>
+                      href="/product_description?id=<?= $product['id']; ?>"
+                      id="btnstyle"
+                      class="btn btn-primary btn-sm me-2">
+                      <i class="bi bi-eye"></i>
+                    </a>
+
                     <a
-                        href="/manage-products-edit?id=<?= $product['id']; ?>"
-                        id="btnstyle"
-                        class="btn btn-success btn-sm me-2"
-                    ><i class="bi bi-pencil"></i
-                        ></a>
+                      href="/manage-products-edit?id=<?= $product['id']; ?>"
+                      id="btnstyle"
+                      class="btn btn-success btn-sm me-2">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal-<?= $product['id']; ?>"id="btnstyle">
-                        <i class="bi bi-trash"></i
-                        >
+                      <i class="bi bi-trash"></i>
                     </button>
+
                     <div class="modal fade" id="delete-modal-<?= $product['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">

@@ -3,46 +3,6 @@
 $database = connectToDB();
 
 ?>
-<style>
-  .bg-overlay {
-  background-image: url(https://mms.businesswire.com/media/20220228005162/en/1372529/5/pr-alloy-origins-65-1000x610.jpg);
-  background-size: cover;
-  height: 650px;
-}
-
-.hero-text-right {
-  max-width: 425px;
-  padding-top: 200px;
-  float: right;
-}
-
-.hero-text {
-  background-color: white;
-  color: black;
-  padding: 50px;
-  padding-left: 70px;
-}
-
-.hero-text-weight {
-  font-weight: bolder;
-}
-
-
-.item-size {
-  padding-top: 75px;
-  padding-bottom: 75px;
-}
-
-.item-bg {
-  background-color: black;
-}
-
-.col-size {
-  width: 280px;
-  height: 280px;
-}
-
-</style>
 <?php require "parts/header.php"; ?>
 <?php require "parts/navbar.php"; ?>
 

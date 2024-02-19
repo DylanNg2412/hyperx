@@ -40,20 +40,20 @@ require "parts/header.php"; ?>
             <?php require "parts/message_success.php"; ?>
             
         <?php if ( !empty( $product["image_url"] ) ) : ?>
-          <img src="/<?= $product["image_url"]; ?>" class="img-fluid pb-3"/>
+          <img src="<?= $product["image_url"]; ?>" class="img-fluid pb-3" width="650px"/>
         <?php endif; ?>
 <hr>
       <div class="d-flex justify-content-center align-items-center gap-3 pt-5 pb-3">
         <!-- switch -->
           <?php if ( $product["switch"] === 'Blue Switch' ) : ?>
             <p class="card-text">
-            Switch:<span class="badge bg-primary">Blue</span> 
+            Switch: <span class="badge bg-primary"> Tactile Blue </span> 
             </p>
           <?php endif; ?>
 
            <?php if ( $product["switch"] === 'Red Switch' ) : ?>
             <p class="card-text">
-            <p>Switch:<span class="badge bg-danger">Red</span></p>
+            <p>Switch: <span class="badge bg-danger"> Linear Red </span></p>
             </p>
           <?php endif; ?>
         <!-- switch -->
@@ -73,20 +73,21 @@ require "parts/header.php"; ?>
          <?php endif; ?>
         <!--status -->
     </div>
-     <div class="d-flex justify-content-center align-items-center pb-3">
-    <form method="POST" action="/cart/add">
-      <input type="hidden" name="product_id" value="<?= $product["id"];  ?>"/>
-            <button type="submit" class="btn btn-secondary border border-radius ">
-            Add to Cart
-          </button>
-    </form>
+     
+    <div class="d-flex justify-content-center align-items-center pb-3">
+      <form method="POST" action="/cart/add">
+        <input type="hidden" name="product_id" value="<?= $product["id"];  ?>"/>
+              <button type="submit" class="btn btn-danger border border-radius <?=( $product["status"] === 'No Stock' ? 'disabled' : '' ); ?>">
+              Add to Cart
+            </button>
+      </form>
     </div>
     <hr>
       <?php else : ?>
         <p class="lead text-center">Product Not Found.</p>
       <?php endif; ?>
       <div class="text-center mt-3">
-        <a href="/" class="btn btn-link btn-sm"
+        <a href="/products" class="btn btn-link btn-sm"
           ><i class="bi bi-arrow-left"></i> Back</a
         >
       </div>
