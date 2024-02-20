@@ -8,7 +8,8 @@
 
     // if user is admin/editor can see all orders
     if (isAdminOrEditor()){
-      $sql ="SELECT * 
+      $sql ="SELECT orders.*,
+      users.name 
         FROM orders
         JOIN users
         ON orders.user_id = users.id";
@@ -75,7 +76,7 @@
                         FROM cart
                         JOIN products 
                         ON cart.product_id = products.id
-                        WHERE order_id = :order_id";
+                        WHERE cart.order_id = :order_id";
 
                         $query = $database->prepare($sql);
 
@@ -84,6 +85,7 @@
                         ]
                     );
                         $products_in_cart = $query->fetchAll();
+                        // var_dump( $products_in_cart);
 
                         foreach ( $products_in_cart as $product ) {
                             echo "<ul><li>{$product['name']} </li></ul>";
