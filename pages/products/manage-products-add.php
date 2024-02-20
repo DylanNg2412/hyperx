@@ -31,8 +31,8 @@ require "parts/header.php";
             <label for="inputState" class="form-label">Switch</label>
             <select id="inputState" class="form-select" name="switch">
             <option selected>Choose...</option>
-            <option>Red Linear</option>
-            <option>Blue Tactile</option>
+            <option>Red Switch</option>
+            <option>Blue Switch</option>
             </select>
         </div>
         

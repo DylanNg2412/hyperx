@@ -55,7 +55,7 @@ $products = $query->fetchAll();
                 <?php
                 if($product["status"] == "No Stock"){
                     echo "badge bg-danger";
-                } else if($product['status'] == "In Stock "){
+                } else if($product['status'] == "In Stock"){
                     echo "badge bg-success";
                 }
                 ?>"><?= $product['status']; ?></span>

@@ -57,10 +57,10 @@ require "parts/header.php" ?>
             <label for="inputState" class="form-label">Switch</label>
             <select id="inputState" class="form-select" name="switch">
             <option value="Red Switch" <?= $product["switch"] === 'Red Switch' ? "selected" : "" ?>>
-            Red Linear
+            Red Switch
             </option>
             <option value="Blue Switch" <?= $product["switch"] === 'Blue Switch' ? "selected" : "" ?>>
-            Blue Tactile
+            Blue Switch
             </option>
             </select>
         </div>
